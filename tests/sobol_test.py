@@ -11,7 +11,7 @@
 """
 
 from numpy import bitwise_xor
-from sobol_seq import *
+from sobol import *
 import datetime
 
 def sobol_test01 ( ):
