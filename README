@@ -4,8 +4,10 @@ Original version is available from
 http://people.sc.fsu.edu/~jburkardt/py_src/sobol/sobol.html
 
 == Installation and Usage ==
-Copy to your python lib directory.
+pip install sobol
 
-Import using normal method. Use i4_sobol to generate a single Sobol vector, or
-i4_sobol_generate to generate a Sobol sequence.
 
+from sobol import i4_sobol, i4_sobol_generator
+
+Use i4_sobol to generate a single Sobol vector, or i4_sobol_generate
+to generate a Sobol sequence.
