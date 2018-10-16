@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 
 setup(name='sobol',
-      version='0.9',
+      version='0.10',
       author='Victor Ng',
       author_email='victor@crankycoder.com',
       description='SOBOL quasi random number sequence generator',
