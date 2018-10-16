@@ -1,3 +1,7 @@
+from __future__ import print_function
+
+import math
+
 """
   Licensing:
     This code is distributed under the GNU LGPL license.
@@ -67,7 +71,7 @@ def r4_uniform_01 ( seed ):
   """ 
   seed = math.floor ( seed )
 
-  seed = mod ( seed, 2147483647 )
+  seed = math.fmod ( seed, 2147483647 )
 
   if ( seed < 0 ):
     seed = seed + 2147483647
@@ -100,15 +104,15 @@ def r8mat_write ( output_filename, m, n, table ):
   try:
     output_unit = open ( output_filename, 'wt' )
   except:
-    print 'R8MAT_WRITE - Error!' 
-    print '  Could not open the output file.' 
+    print('R8MAT_WRITE - Error!')
+    print('  Could not open the output file.')
     return
 
 #  Write the data.
 #  For smaller data files, and less precision, try:
 #     fprintf ( output_unit, '  #14.6f', table(i,j) )
-  for j in xrange(0, n):
-    for i in xrange (0, m):
+  for j in range(0, n):
+    for i in range (0, m):
       output_unit.write('  %24.16f'%table[i,j] )
     output_unit.write('\n' )
 
